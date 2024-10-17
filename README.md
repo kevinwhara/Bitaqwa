@@ -1,3 +1,5 @@
 # bitaqwa_app
 
-A new Flutter project.
+My first complex Flutter project.
+
+Aplikasi ini bertujuan untuk membantu umat Islam untuk melakukan ibadah sehari-hari.
