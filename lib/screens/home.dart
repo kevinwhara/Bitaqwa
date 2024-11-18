@@ -1,8 +1,8 @@
 import 'package:bitaqwa_app/utils/colors.dart';
 import 'package:flutter/material.dart';
 
-class Detail extends StatelessWidget {
-  const Detail({super.key});
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -74,174 +74,98 @@ class Detail extends StatelessWidget {
         margin: const EdgeInsets.all(20),
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
-          color: Colors.orange,
-          borderRadius: BorderRadius.circular(24),
-        ),
-        child: const SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children: [
-              Column(
-                children: [
-                  Image(
-                    image: AssetImage("assets/images/ic_menu_doa 1.png"),
-                    fit: BoxFit.cover,
-                  ),
-                  Text(
-                    "Doa-doa",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white
-                    ),
-                  ),
-                  
-                ],
-              ),
-              SizedBox(width: 10,),
-              Column(
-                children: [
-                  Image(
-                    image: AssetImage("assets/images/ic_menu_jadwal_sholat.png"),
-                    fit: BoxFit.cover,
-                  ),
-                  Text(
-                    "Jadwal Sholat",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(width: 10,),
-              Column(
-                children: [
-                  Image(
-                    image: AssetImage("assets/images/ic_menu_video_kajian.png"),
-                    fit: BoxFit.cover,
-                  ),
-                  Text(
-                    "Kajian",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(width: 10,),
-              Column(
-                children: [
-                  Image(
-                    image: AssetImage("assets/images/ic_menu_zakat.png"),
-                    fit: BoxFit.cover,
-                  ),
-                  Text(
-                    "Zakat",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      );
-    }
-
-
-
-
-    Widget Menus() {
-      return Container(
-        padding: const EdgeInsets.all(12),
-        margin: const EdgeInsets.all(20),
-        decoration: BoxDecoration(
           color: ColorApp.primary,
           borderRadius: BorderRadius.circular(24),
         ),
-        child: const SingleChildScrollView(
+        child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              Column(
-                children: [
-                  Image(
-                    image: AssetImage("assets/images/ic_menu_doa 1.png"),
-                    fit: BoxFit.cover,
-                  ),
-                  SizedBox(height: 2,),
-                  Text(
-                    "Doa-doa",
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+              GestureDetector(
+                onTap: (){
+                  Navigator.pushNamed(context, '/doa');
+                },
+                child: const Column(
+                  children: [
+                    Image(
+                      image: AssetImage("assets/images/ic_menu_doa 1.png"),
+                      fit: BoxFit.cover,
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(width: 10,),
-              Column(
-                children: [
-                  Image(
-                    image: AssetImage("assets/images/ic_menu_jadwal_sholat.png"),
-                    fit: BoxFit.cover,
-                  ),
-                  SizedBox(height: 2,),
-                  Text(
-                    "Jadwal Sholat",
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                    Text(
+                      "Doa-doa",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white
+                      ),
                     ),
-                  ),
-                ],
+                    
+                  ],
+                ),
               ),
-              SizedBox(width: 10,),
-              Column(
+
+              const SizedBox(width: 10,),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/zakat');
+                },
+                child: const Column(
+                  children: [
+                    Image(
+                      image: AssetImage("assets/images/ic_menu_zakat.png"),
+                      fit: BoxFit.cover,
+                    ),
+                    Text(
+                      "Zakat",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              const SizedBox(width: 10,),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/jadwal-sholat');
+                },
+                child: const Column(
+                  children: [
+                    Image(
+                      image: AssetImage("assets/images/ic_menu_jadwal_sholat.png"),
+                      fit: BoxFit.cover,
+                    ),
+                    Text(
+                      "Jadwal Sholat",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 10,),
+              const Column(
                 children: [
                   Image(
                     image: AssetImage("assets/images/ic_menu_video_kajian.png"),
                     fit: BoxFit.cover,
                   ),
-                  SizedBox(height: 2,),
                   Text(
                     "Kajian",
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.white
                     ),
                   ),
                 ],
               ),
-              SizedBox(width: 10,),
-              Column(
-                children: [
-                  Image(
-                    image: AssetImage("assets/images/ic_menu_zakat.png"),
-                    fit: BoxFit.cover,
-                  ),
-                  SizedBox(height: 2,),
-                  Text(
-                    "Zakat",
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(width: 10,),
             ],
           ),
         ),
@@ -254,7 +178,7 @@ class Detail extends StatelessWidget {
         children: [
           Header(),
           const SizedBox(height: 30,),
-          Menus(),
+          CardMenus(),
           // CardMenus(),
         ],
       ),
