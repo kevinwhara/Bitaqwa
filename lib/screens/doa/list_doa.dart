@@ -8,9 +8,9 @@ import 'package:bitaqwa_app/utils/colors.dart';
 class ListDoa extends StatelessWidget {
   
   const ListDoa({
-    Key? key,
+    super.key,
     required this.category,
-  }) : super(key: key);
+  });
 
   final String category;
 

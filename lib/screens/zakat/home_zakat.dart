@@ -4,7 +4,7 @@ import 'package:flutter_masked_text2/flutter_masked_text2.dart';
 import 'package:intl/intl.dart';
 
 class HomeZakat extends StatefulWidget {
-  HomeZakat({super.key});
+  const HomeZakat({super.key});
 
   @override
   State<HomeZakat> createState() => _HomeZakatState();
@@ -48,8 +48,8 @@ class _HomeZakatState extends State<HomeZakat> {
     } else {
       // kurang dari 80 juta
       showDialog(context: context, builder: (context) => AlertDialog(
-        title: Text("Peringatan!"),
-        content: Text("Harta anda tidak mencapai Rp. 85.000.000"),
+        title: const Text("Peringatan!"),
+        content: const Text("Harta anda tidak mencapai Rp. 85.000.000"),
         actions: [
           IconButton(
             onPressed: (){
@@ -112,8 +112,8 @@ class _HomeZakatState extends State<HomeZakat> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
-                minimumSize: Size(double.infinity, 0),
-                padding: EdgeInsets.all(16)
+                minimumSize: const Size(double.infinity, 0),
+                padding: const EdgeInsets.all(16)
               ),
               child: const Text(
                 "Ok",
@@ -159,7 +159,7 @@ class _HomeZakatState extends State<HomeZakat> {
             ),
           ),
 
-          SizedBox(width: 32,),
+          const SizedBox(width: 32,),
 
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),

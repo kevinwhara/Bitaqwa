@@ -1,6 +1,7 @@
 import 'package:bitaqwa_app/screens/doa/home_doa.dart';
 import 'package:bitaqwa_app/screens/home.dart';
 import 'package:bitaqwa_app/screens/sholat/jadwal_sholat_screen.dart';
+import 'package:bitaqwa_app/screens/video/video_kajian_screen.dart';
 import 'package:bitaqwa_app/screens/zakat/home_zakat.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -23,6 +24,7 @@ class MainApp extends StatelessWidget {
         '/doa' : (context) => const HomeDoa(),
         '/zakat' : (context) => HomeZakat(),
         '/jadwal-sholat' : (context) => const JadwalSholatScreen(),
+        '/video-kajian' : (context) => const VideoKajianScreen(),
       },
     );
   }

@@ -5,12 +5,12 @@ import 'package:bitaqwa_app/utils/colors.dart';
 
 class DetailDoa extends StatelessWidget {
   const DetailDoa({
-    Key? key,
+    super.key,
     required this.title,
     required this.arabicText,
     required this.translation,
     required this.reference,
-  }) : super(key: key);
+  });
 
   final String title;
   final String arabicText;

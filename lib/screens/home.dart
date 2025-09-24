@@ -150,21 +150,26 @@ class Home extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 10,),
-              const Column(
-                children: [
-                  Image(
-                    image: AssetImage("assets/images/ic_menu_video_kajian.png"),
-                    fit: BoxFit.cover,
-                  ),
-                  Text(
-                    "Kajian",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/video-kajian');
+                },
+                child: const Column(
+                  children: [
+                    Image(
+                      image: AssetImage("assets/images/ic_menu_video_kajian.png"),
+                      fit: BoxFit.cover,
                     ),
-                  ),
-                ],
+                    Text(
+                      "Kajian",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
